@@ -1,0 +1,19 @@
+[
+  {
+    "id": "123456789012345678",
+    "username": "example",
+    "display_name": "Example",
+    "categories": [
+      "scam",
+      "phishing"
+    ],
+    "note": "偽のNitroプレゼント企画を装い、認証情報の入力を要求",
+    "status": "listed",
+    "username_history": [
+      "oldname"
+    ],
+    "report_count": 1,
+    "added_at": "2026-08-21",
+    "updated_at": "2026-08-21"
+  }
+]
