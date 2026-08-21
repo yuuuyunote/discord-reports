@@ -1,0 +1,17 @@
+{
+  "name": "discord-reports",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Discord malicious-user report accumulation system â€? data repo (users/*.json, schema, validation, dist build)",
+  "exports": {
+    "./validation": "./src/validation.mjs"
+  },
+  "scripts": {
+    "build": "node scripts/build-dist.mjs",
+    "test": "node --test scripts/validation.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+
+# dist/ はあえてignoreしない。
+# 検索・統計サイトが dist/users.json / dist/stats.json を直接fetchする設計のため、
+# ここが空だとサイト側が壊れる。ビルド成果物だが「配布物」でもある。
