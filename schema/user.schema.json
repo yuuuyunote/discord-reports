@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/OWNER/REPO/main/schema/user.schema.json",
+  "title": "Discord malicious user record",
+  "description": "users/<discordID>.json 1件分のスキーマ。additionalProperties:false のため、ここに定義されていないキーは弾かれる。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "username",
+    "categories",
+    "note",
+    "status",
+    "report_count",
+    "added_at",
+    "updated_at"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "エディタ補完用の相対パス参照。値そのものはバリデーション対象外。"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{17,20}$",
+      "description": "Discordスノーフレーク。ファイル名 <id>.json と一致していなければならない（この一致チェックはJSON Schema単体では表現できないため、validation.mjs側で別途強制する）。"
+    },
+    "username": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32,
+      "description": "直近確認時点のユーザー名スナップショット。"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "scam",
+          "phishing",
+          "impersonation",
+          "raid-spam",
+          "dm-solicitation",
+          "harassment",
+          "doxxing",
+          "hate-speech",
+          "bot-abuse",
+          "other"
+        ]
+      }
+    },
+    "note": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000,
+      "description": "上限1000文字は設計メモに明記がなかったための追加提案。運用しながら調整可。"
+    },
+    "status": {
+      "enum": ["listed", "delisted"]
+    },
+    "username_history": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 32
+      }
+    },
+    "report_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "added_at": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
+  }
+}

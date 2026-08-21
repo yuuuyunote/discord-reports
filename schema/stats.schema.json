@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/OWNER/REPO/main/schema/stats.schema.json",
+  "title": "dist/stats.json",
+  "description": "build-dist.mjs が users/*.json から生成する集計。人手で編集しないファイルだが、生成結果の自己検証・サイト側の型ドキュメントとして定義しておく。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["generated_at", "total_listed", "total_reports", "by_category"],
+  "properties": {
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "total_listed": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "status:\"listed\" の件数（delistedは含まない）"
+    },
+    "total_reports": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "status:\"listed\" のレコードに限定した report_count の合計（delistedは除外。撤回済みの通報件数まで公開統計に積み上げるのは実態と合わないための判断）"
+    },
+    "by_category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scam", "phishing", "impersonation", "raid-spam", "dm-solicitation",
+        "harassment", "doxxing", "hate-speech", "bot-abuse", "other"
+      ],
+      "properties": {
+        "scam": { "type": "integer", "minimum": 0 },
+        "phishing": { "type": "integer", "minimum": 0 },
+        "impersonation": { "type": "integer", "minimum": 0 },
+        "raid-spam": { "type": "integer", "minimum": 0 },
+        "dm-solicitation": { "type": "integer", "minimum": 0 },
+        "harassment": { "type": "integer", "minimum": 0 },
+        "doxxing": { "type": "integer", "minimum": 0 },
+        "hate-speech": { "type": "integer", "minimum": 0 },
+        "bot-abuse": { "type": "integer", "minimum": 0 },
+        "other": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
