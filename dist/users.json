@@ -1,19 +1,15 @@
 [
   {
-    "id": "123456789012345678",
-    "username": "example",
-    "display_name": "Example",
+    "id": "1117726913683791905",
+    "username": "airu_.1",
     "categories": [
-      "scam",
-      "phishing"
+      "bot-abuse",
+      "raid-spam"
     ],
-    "note": "偽のNitroプレゼント企画を装い、認証情報の入力を要求",
+    "note": "(通報時の補足なし)",
     "status": "listed",
-    "username_history": [
-      "oldname"
-    ],
-    "report_count": 1,
-    "added_at": "2026-08-21",
-    "updated_at": "2026-08-21"
+    "report_count": 2,
+    "added_at": "2026-08-22",
+    "updated_at": "2026-08-23"
   }
 ]
