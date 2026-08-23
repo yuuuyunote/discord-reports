@@ -1,0 +1,94 @@
+name: Validate & build dist
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "users/**"
+      - "src/**"
+      - "schema/**"
+      - "scripts/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: build-dist-main
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Workerのpre-commit検証をすり抜けた不正ファイルがあっても
+      # ここでジョブ全体を即死させない（continue-on-error）。
+      # dist更新とIssue起票は必ず走らせたいので、最後に別ステップで失敗させる。
+      - name: Build dist
+        id: build
+        continue-on-error: true
+        run: node scripts/build-dist.mjs
+
+      - name: Commit dist/ changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "chore: rebuild dist [skip ci]"
+            git push
+          fi
+
+      - name: Open/update issue if validation failed
+        if: steps.build.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'dist/failures.json';
+            let body = 'users/*.json のバリデーションに失敗したファイルがあります。dist からは除外して公開していますが、元ファイルの修正が必要です。';
+            if (fs.existsSync(path)) {
+              const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+              body += '\n\n```json\n' + JSON.stringify(data.failures, null, 2) + '\n```';
+            }
+            const title = 'users/*.json validation failures';
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: ['data-validation'],
+            });
+            const existing = issues.find(i => i.title === title);
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['data-validation'],
+              });
+            }
+
+      - name: Fail the job if validation failed
+        if: steps.build.outcome == 'failure'
+        run: |
+          echo "::error::users/*.json validation failed — see dist/failures.json and the opened issue."
+          exit 1
