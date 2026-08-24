@@ -28,7 +28,7 @@ export const CATEGORY_IDS = Object.freeze([
   "phishing",
   "impersonation",
   "raid-spam",
-  "dm-solicitation",
+  "bad-solicitation",
   "harassment",
   "doxxing",
   "hate-speech",
