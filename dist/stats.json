@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T02:25:06.858Z",
+  "generated_at": "2026-08-24T02:25:43.211Z",
   "total_listed": 1,
   "total_reports": 2,
   "by_category": {
@@ -7,7 +7,7 @@
     "phishing": 0,
     "impersonation": 0,
     "raid-spam": 1,
-    "dm-solicitation": 0,
+    "bad-solicitation": 0,
     "harassment": 0,
     "doxxing": 0,
     "hate-speech": 0,
