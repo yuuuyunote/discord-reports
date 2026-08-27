@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/OWNER/REPO/main/schema/bot-stats.schema.json",
+  "title": "dist/bots-stats.json",
+  "description": "build-dist.mjs が bots/*.json から生成する集計。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["generated_at", "total_listed", "total_reports", "by_category"],
+  "properties": {
+    "generated_at": { "type": "string", "format": "date-time" },
+    "total_listed": { "type": "integer", "minimum": 0 },
+    "total_reports": { "type": "integer", "minimum": 0 },
+    "by_category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "malware-token-grabber", "raid-spam", "scam-phishing",
+        "impersonation", "data-harvesting", "other"
+      ],
+      "properties": {
+        "malware-token-grabber": { "type": "integer", "minimum": 0 },
+        "raid-spam": { "type": "integer", "minimum": 0 },
+        "scam-phishing": { "type": "integer", "minimum": 0 },
+        "impersonation": { "type": "integer", "minimum": 0 },
+        "data-harvesting": { "type": "integer", "minimum": 0 },
+        "other": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
