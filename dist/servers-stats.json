@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-27T07:02:06.318Z",
-  "total_listed": 0,
-  "total_reports": 0,
+  "generated_at": "2026-08-27T14:02:49.397Z",
+  "total_listed": 1,
+  "total_reports": 2,
   "by_category": {
     "scam-phishing": 0,
-    "illegal-tos-content": 0,
+    "illegal-tos-content": 1,
     "raid-hub": 0,
     "other": 0
   }
