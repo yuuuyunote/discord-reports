@@ -26,7 +26,8 @@
       "additionalProperties": false,
       "required": [
         "scam", "phishing", "impersonation", "raid-spam", "bad-solicitation",
-        "harassment", "doxxing", "hate-speech", "bot-abuse", "other"
+        "harassment", "doxxing", "hate-speech", "bot-abuse",
+        "malicious-server-creator", "malicious-bot-developer", "other"
       ],
       "properties": {
         "scam": { "type": "integer", "minimum": 0 },
@@ -38,6 +39,8 @@
         "doxxing": { "type": "integer", "minimum": 0 },
         "hate-speech": { "type": "integer", "minimum": 0 },
         "bot-abuse": { "type": "integer", "minimum": 0 },
+        "malicious-server-creator": { "type": "integer", "minimum": 0 },
+        "malicious-bot-developer": { "type": "integer", "minimum": 0 },
         "other": { "type": "integer", "minimum": 0 }
       }
     }
