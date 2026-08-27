@@ -51,6 +51,8 @@
           "doxxing",
           "hate-speech",
           "bot-abuse",
+          "malicious-server-creator",
+          "malicious-bot-developer",
           "other"
         ]
       }
