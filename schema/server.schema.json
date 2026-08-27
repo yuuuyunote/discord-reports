@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/OWNER/REPO/main/schema/server.schema.json",
+  "title": "Discord malicious server record",
+  "description": "servers/<guildID>.json 1件分のスキーマ。additionalProperties:false のため、ここに定義されていないキーは弾かれる。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "categories",
+    "note",
+    "status",
+    "report_count",
+    "added_at",
+    "updated_at"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "エディタ補完用の相対パス参照。値そのものはバリデーション対象外。"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{17,20}$",
+      "description": "Discordスノーフレーク（ギルドID）。ファイル名 <id>.json と一致していなければならない（この一致チェックはJSON Schema単体では表現できないため、validation.mjs側で別途強制する）。"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "直近確認時点のサーバー名スナップショット（Discordのサーバー名上限は100文字）。"
+    },
+    "creator_id": {
+      "type": "string",
+      "pattern": "^[0-9]{17,20}$",
+      "description": "サーバー作成者のDiscordユーザーID。取得できない場合もあるため任意項目。"
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "scam-phishing",
+          "illegal-tos-content",
+          "raid-hub",
+          "other"
+        ]
+      }
+    },
+    "note": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "status": {
+      "enum": ["listed", "delisted"]
+    },
+    "name_history": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      }
+    },
+    "report_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "added_at": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
+  }
+}
