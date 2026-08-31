@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-27T14:02:49.398Z",
-  "total_listed": 3,
-  "total_reports": 4,
+  "generated_at": "2026-08-31T05:50:58.348Z",
+  "total_listed": 4,
+  "total_reports": 5,
   "by_category": {
     "scam": 0,
     "phishing": 0,
     "impersonation": 0,
-    "raid-spam": 1,
+    "raid-spam": 2,
     "bad-solicitation": 1,
     "harassment": 0,
     "doxxing": 0,
