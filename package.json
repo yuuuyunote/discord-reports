@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Discord malicious-user report accumulation system â€? data repo (users/*.json, schema, validation, dist build)",
+  "description": "Discord malicious-user report accumulation system â€” data repo (users/*.json, schema, validation, dist build)",
   "exports": {
     "./validation": "./src/validation.mjs"
   },
