@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-31T05:50:58.348Z",
-  "total_listed": 4,
-  "total_reports": 5,
+  "generated_at": "2026-09-07T04:25:50.284Z",
+  "total_listed": 5,
+  "total_reports": 6,
   "by_category": {
     "scam": 0,
     "phishing": 0,
@@ -12,7 +12,7 @@
     "doxxing": 0,
     "hate-speech": 0,
     "bot-abuse": 1,
-    "malicious-server-creator": 1,
+    "malicious-server-creator": 2,
     "malicious-bot-developer": 0,
     "other": 0
   }
