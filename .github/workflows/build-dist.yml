@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "users/**"
+      - "servers/**"
+      - "bots/**"
       - "src/**"
       - "schema/**"
       - "scripts/**"
