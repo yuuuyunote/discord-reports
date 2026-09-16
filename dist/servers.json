@@ -1,7 +1,43 @@
 [
   {
+    "id": "1167738314682552420",
+    "name": "アイスshop",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1408648382548803646",
+    "name": "ひは鯖",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
     "id": "1410995458289041501",
     "name": "おじろ鯖",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1416767610950783038",
+    "name": "いるみんの鯖",
     "categories": [
       "illegal-tos-content"
     ],
@@ -48,6 +84,18 @@
     "updated_at": "2026-09-16"
   },
   {
+    "id": "1478754087846674585",
+    "name": "ぽぴー鯖",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
     "id": "1488444196846305403",
     "name": "𝐍𝐀𝐏𝐎𝐑𝐈 𝐒𝐇𝐎𝐏",
     "categories": [
@@ -62,6 +110,30 @@
   {
     "id": "1489990709879771289",
     "name": "to鯖",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1495439253465731123",
+    "name": "あいあい𝑺𝑯𝑶𝑷",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1496164793151914186",
+    "name": "𝐻𝐴𝑅𝑈 𝑆𝐸𝑉𝐸𝑅",
     "categories": [
       "illegal-tos-content"
     ],
@@ -110,6 +182,54 @@
   {
     "id": "1512806200767680522",
     "name": "誤BAN被害者の会",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1515726738288808126",
+    "name": "ばげちのサーバー",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1524271180520099922",
+    "name": "えすしょっぷ",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1531653390378205325",
+    "name": "𝐖𝐨𝐫𝐥𝐝.𝐒𝐡𝐨𝐩",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1537112512145657887",
+    "name": "🎮石垢販売-妖怪ウォッチ4++改造",
     "categories": [
       "illegal-tos-content"
     ],
