@@ -72,8 +72,32 @@
     "updated_at": "2026-09-16"
   },
   {
+    "id": "1459828855635443950",
+    "name": "ᕼᗩᖇᑌ 𝕾𝖍𝖔𝖕",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
     "id": "1464454019207528550",
     "name": "ラムネの販売所",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1464567479983411225",
+    "name": "Spotify 100円｜毎週配布🎁",
     "categories": [
       "illegal-tos-content"
     ],
@@ -278,6 +302,30 @@
   {
     "id": "1537112512145657887",
     "name": "🎮石垢販売-妖怪ウォッチ4++改造",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1541821088806215700",
+    "name": "サブスク SHOP",
+    "categories": [
+      "illegal-tos-content"
+    ],
+    "note": "(通報時の補足なし)",
+    "status": "listed",
+    "report_count": 1,
+    "added_at": "2026-09-16",
+    "updated_at": "2026-09-16"
+  },
+  {
+    "id": "1545702992743895200",
+    "name": "AKATAshop",
     "categories": [
       "illegal-tos-content"
     ],
